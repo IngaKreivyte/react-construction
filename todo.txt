@@ -1,0 +1,1 @@
+Sukurti nauja React projekta Jame turi buti App komponentas kuriame yra ideti Header Article Article ir Footer komponentai Header turi gauti informacija: firstTab, secondTab Article turi tureti title Footeris turi tureti contacts Ideti paveiksleli Siek tiek aprasyti stiliaus

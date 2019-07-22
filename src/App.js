@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Nav from './components/Nav';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// Class component
+// Jei koponentas ar html el. be teksto ar vidaus
+// uzrasome <div/>  ar  <Component/>
+// state galimas tik class komponentuose
+
+class App extends React.Component {
+  state={
+    title:'React Construction Site'
+  };
+
+  // metodas skirtas pakeisit state
+  changeTitle = ()=>{
+     this.setState({title:'Construction'})
+  };
+
+  render() {
+    // is cia mes sugeneruojam html
+    return (
+      <div>
+        <Nav firstTab="Home page"
+             secondTab="About"
+             thirdTab="Contacts"/>
+        <h1 onClick={this.changeTitle}>{this.state.title}</h1>
+        <p>hello world</p>
+      </div>
+    )
+  }
 }
 
+// export component
 export default App;
